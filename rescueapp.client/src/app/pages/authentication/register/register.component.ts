@@ -37,9 +37,10 @@ export class AppSideRegisterComponent {
 
     if ((this.Username == '') || (this.password == undefined) || (this.password == '') || (this.email == undefined) || (this.email == '')) { Swal.fire('','Please Fill Mandatory Fields!'); } else {
       this.service.Insertuser(val).subscribe(res => {
-        console.log(res.toString());
-        if (res.toString() == 'true') { Swal.fire('', 'Successfully Inserted!', 'success'); } else if (res.toString() == 'false') { Swal.fire('', 'User details already Exist!', 'error'); }
-        window.location.reload();
+        console.log(res);
+        Swal.fire('Successfull !', '', 'success');
+        this.router.navigate(['/login']);
+       
       }, (error => { Swal.fire('Error Occurred', '', 'error'); }));
     }
   }

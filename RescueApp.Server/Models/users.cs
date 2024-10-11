@@ -7,7 +7,7 @@ namespace RescueApp.Server.Models
 {
     public class users
     {
-        public string UserId { get; set; }
+       
         public string UserName { get; set; }
         public string Email { get; set; }
         public String Password { get; set; }
