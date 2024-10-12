@@ -14,4 +14,8 @@ export class ServiceService {
   Insertuser(val: any) {
     return this.http.post(this.APIUrl + '/insertuser', val);
   }
+
+  Getloggeduser(val: any, val2: any) {
+    return this.http.get(this.APIUrl + '/Getuser/' + val + '/' + val2);
+  }
 }

@@ -36,18 +36,18 @@
               >Username</mat-label
             >
             <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input matInput />
+              <input matInput [(ngModel)]="Username" name="username"/>
             </mat-form-field>
             <!-- password -->
             <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
               >Password</mat-label
             >
             <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input matInput type="password" />
+              <input matInput type="password" [(ngModel)]="password" name="password" />
             </mat-form-field>
 
            
-            <a [routerLink]="['/']" mat-flat-button color="primary" class="w-100">
+            <a (click)="login()"  mat-flat-button color="primary" class="w-100">
               Sign In
             </a>
             <!-- input -->
